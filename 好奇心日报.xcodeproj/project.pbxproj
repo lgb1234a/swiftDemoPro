@@ -531,7 +531,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cn.gikoo.-----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/admin/Desktop/好奇心日报/好奇心日报/OCSwiftBridger.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/admin/Desktop/swiftDemoPro/好奇心日报/OCSwiftBridger.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -548,7 +548,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cn.gikoo.-----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/admin/Desktop/好奇心日报/好奇心日报/OCSwiftBridger.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/admin/Desktop/swiftDemoPro/好奇心日报/OCSwiftBridger.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

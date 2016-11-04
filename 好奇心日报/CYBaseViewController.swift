@@ -13,6 +13,7 @@
 import Foundation
 import SnapKit
 
+
 class CYBaseViewController: UIViewController, CYBlurEffectViewDelegate {
     
     let touchBtnWidth = 40.0
@@ -38,7 +39,9 @@ class CYBaseViewController: UIViewController, CYBlurEffectViewDelegate {
     // 初始化索引页
     func initIndexPage() {
         
-        self.blurEffectView = Bundle.main.loadNibNamed("CYBlurEffectView", owner: nil, options: nil)?.first as! CYBlurEffectView?
+//        self.blurEffectView = Bundle.main.loadNibNamed(UINib.nib.CYBlurEffectView.rawValue, owner: nil, options: nil)?.first as! CYBlurEffectView?
+        self.blurEffectView = CYBlurEffectView.loadFromDefaultNib()
+        
         self.blurEffectView?.delegate = self
     }
     
