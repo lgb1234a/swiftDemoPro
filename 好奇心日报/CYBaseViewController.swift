@@ -103,10 +103,8 @@ class CYBaseViewController: UIViewController, CYBlurEffectViewDelegate {
         self.touchBtn.layer.setAffineTransform(CGAffineTransform.init(translationX: 0, y: self.downHeight))
     }
     
-// CYBlurEffectViewDelegate func
     // 隐藏模糊View
     func shouldHideBlurView(isShouldHide: Bool) {
-//        self.hideOrShowIndexPage(isNeedHide: isShouldHide)
         self.tapHomeBtn()
     }
     

@@ -29,9 +29,9 @@ class CYBlurEffectView: UIView, UITableViewDelegate, UITableViewDataSource, UISc
 //        return Bundle.main.loadNibNamed(String(describing: self), owner: nil, options: nil)?.first as! CYBlurEffectView
 //        return Bundle.main.loadNibNamed(CYBlurEffectView.identifier, owner: nil, options: nil)?.first as! CYBlurEffectView
         
-        guard let viewInitialed = Bundle.main.loadNibNamed(T.identifier, owner: nil, options: nil)?.first as? T
+        guard let viewInitialed = Bundle.main.loadNibNamed(T.CY_identifier, owner: nil, options: nil)?.first as? T
         else {
-            fatalError("无法用\(T.identifier)从Nib文件中生成一个UIView实例对象")
+            fatalError("无法用\(T.CY_identifier)从Nib文件中生成一个UIView实例对象")
         }
         
         return viewInitialed
@@ -40,7 +40,7 @@ class CYBlurEffectView: UIView, UITableViewDelegate, UITableViewDataSource, UISc
     override func awakeFromNib() {
         self.indexTableView.delegate = self
         self.indexTableView.dataSource = self
-        self.indexTableView.register(UITableViewCell.self, forCellReuseIdentifier: UITableViewCell.identifier.baseCell.rawValue)
+        self.indexTableView.register(UITableViewCell.self, forCellReuseIdentifier: UITableViewCell.CY_identifier.baseCell.rawValue)
         
         self.pageScrollView.isPagingEnabled = true
         self.pageScrollView.contentSize = CGSize.init(width: kScreenSize.width * 2, height: 0)
@@ -53,7 +53,7 @@ class CYBlurEffectView: UIView, UITableViewDelegate, UITableViewDataSource, UISc
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: UITableViewCell.identifier.baseCell.rawValue, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: UITableViewCell.CY_identifier.baseCell.rawValue, for: indexPath)
         
         cell.textLabel?.text = self.dataSource[indexPath.row]
         cell.backgroundColor = UIColor.clear

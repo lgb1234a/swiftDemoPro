@@ -14,23 +14,35 @@ let kScreenFrame : CGRect = UIScreen.main.bounds
 
 
 extension UINib {
-    enum nib: String {
+    enum CY_nib: String {
         case CYBlurEffectView
     }
 }
 
 extension UITableViewCell {
-    enum identifier: String {
+    enum CY_identifier: String {
         case baseCell
     }
 }
 
+protocol UITableViewCellDelegate {
+    static var CY_identifier: String { get }
+}
+
+extension UITableViewCellDelegate where Self: UITableViewCell {
+    static var identifier: String {
+        return UITableViewCell.CY_identifier.baseCell.rawValue
+    }
+}
+
 protocol CY_UIIdentifier {
-    static var identifier: String { get }
+    static var CY_identifier: String { get }
 }
 
 extension CY_UIIdentifier where Self: UIView {
-    static var identifier: String {
+    static var CY_identifier: String {
         return String(describing: self)
     }
 }
+
+
